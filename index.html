@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pippi Price Fixer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Pippi Price Fixer</h1>
+
+<form id="priceCalculator">
+
+    <div class="form-row">
+        <label for="rarity"><strong>Rarity:</strong></label>
+        <select id="rarity" name="rarity">
+            <option value="NA" selected>N/A</option>
+			<option value="VeryCommon">Very Common</option>
+            <option value="Common">Common</option>
+            <option value="Uncommon">Uncommon</option>
+            <option value="Rare">Rare</option>
+            <option value="ExtremelyRare">Extremely Rare</option>
+        </select>
+    </div>
+
+    <div class="form-row">
+        <label for="tier"><strong>Tier:</strong></label>
+        <select id="tier" name="tier">
+			<option value="NA" selected>N/A</option>
+            <option value="Beginner">Beginner</option>
+            <option value="Basic">Basic</option>
+            <option value="Simple">Simple</option>
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+            <option value="Advanced">Advanced</option>
+            <option value="Epic">Epic</option>
+            <option value="Endgame">Endgame</option>
+        </select>
+    </div>
+
+    <div class="form-row">
+        <label for="sourceDistance"><strong>Source Distance:</strong></label>
+        <select id="sourceDistance" name="sourceDistance">
+			<option value="NA" selected>N/A</option>
+            <option value="ImmediateArea">Immediate Area</option>
+            <option value="Close">Close</option>
+            <option value="Medium">Medium</option>
+            <option value="Far">Far</option>
+            <option value="Unknown">Unknown</option>
+        </select>
+    </div>
+
+    <div class="form-row">
+        <label for="demand"><strong>Demand:</strong></label>
+        <select id="demand" name="demand">
+            <option value="NA" selected>N/A</option>
+			<option value="None">None</option>
+            <option value="Low">Low</option>
+            <option value="Moderate">Moderate</option>
+            <option value="High">High</option>
+            <option value="Extreme">Extreme</option>
+        </select>
+    </div>
+
+	<div class="form-row">
+		<label for="materialCost"><strong>Material Cost:</strong></label>
+		<select id="materialCost" name="materialCost">
+			<option value="NA" selected>N/A</option>
+			<option value="Low">Low</option>
+			<option value="Moderate">Moderate</option>
+			<option value="High">High</option>
+			<option value="VeryHigh">Very High</option>
+		</select>
+	</div>
+
+    <div class="form-row">
+        <label for="weight"><strong>Weight:</strong></label>
+        <select id="weight" name="weight">
+            <option value="Heavy">Heavy</option>
+            <option value="Moderate">Moderate</option>
+            <option value="Light">Light</option>
+            <option value="None" selected>None</option>
+        </select>
+    </div>
+	
+	<div class="form-row">
+        <label for="weight"><strong>Crafting Ease:</strong></label>
+        <select id="craftingEase" name="craftingEase">
+			<option value="NA" selected>N/A</option>
+			<option value="Easy">Easy</option>
+			<option value="Standard">Standard</option>
+			<option value="Annoying">Annoying</option>
+			<option value="Hard">Hard</option>
+			<option value="VeryHard">VeryHard</option>
+			<option value="Extremely Difficult">Extremely Difficult</option>
+			<option value="Impossible">Impossible</option>
+		</select>
+	</div>
+
+    <button type="submit">Calculate Prices</button>
+    
+</form>
+
+<h2>Results</h2>
+
+<div class="results-grid">
+    <div class="result-box" id="harvesterBox">
+        <h3><span class="emoji">🌾</span>Harvester</h3>
+        <p><strong>Sell to Vendor:</strong> <span id="sellPriceHarvester">-</span></p>
+        <p><strong>Buy from Vendor:</strong> <span id="buyPriceHarvester">-</span></p>
+    </div>
+    
+    <div class="result-box" id="processorBox">
+        <h3><span class="emoji">🔥</span>Processor</h3>
+        <p><strong>Sell to Vendor:</strong> <span id="sellPriceProcessor">-</span></p>
+        <p><strong>Buy from Vendor:</strong> <span id="buyPriceProcessor">-</span></p>
+    </div>
+    
+    <div class="result-box" id="resellerBox">
+        <h3><span class="emoji">💰</span>Reseller</h3>
+        <p><strong>Sell to Vendor:</strong> <span id="sellPriceReseller">-</span></p>
+        <p><strong>Buy from Vendor:</strong> <span id="buyPriceReseller">-</span></p>
+    </div>
+    
+    <div class="result-box" id="userBox">
+        <h3><span class="emoji">🗡️</span>End User</h3>
+        <p><strong>Sell to Vendor:</strong> <span id="sellPriceUser">-</span></p>
+        <p><strong>Buy from Vendor:</strong> <span id="buyPriceUser">-</span></p>
+    </div>
+</div>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
